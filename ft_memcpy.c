@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 17:55:55 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/16 19:03:35 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/16 19:10:19 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	char	*cdest;
-	char	*csrc;
-
-	cdest = (char *)dest;
-	csrc = (char *)src;
 	i = 0;
 	while (n > 0)
 	{

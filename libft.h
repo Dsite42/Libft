@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/16 18:07:50 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/16 20:04:41 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 // The memory areas shall not overlap.
 // Return: A pointer to the copy.
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+// This function ft_strlcpy copies n-1 bytes to a dest string by 0 terminating
+// the results. src must be NUL-terminated.
+// Return: The total length of the string they tried to create (length of src).
+size_t	ft_strlcpy(char *dest, char *src, size_t size);
 
 // This function ft_strlen is checking the length of a string.
 // Return: length of a string as int.
