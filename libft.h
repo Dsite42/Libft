@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 16:58:09 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/17 19:30:26 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define LIBFT_H
 
 #include <strings.h>
+
+// This function ft_atoi converts the string to an int.The string may begin with
+// an arbitrary amount of white space (as determined by isspace(3)) followed
+// by a single optional '+' or '-' sign.
+// Return: The converted string number as int.
+
+int	ft_atoi(char *str);
 
 // This function bzero erases n bytes in the memory from the pointer
 // by overwriting it with '\0'
