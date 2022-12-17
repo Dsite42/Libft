@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/16 20:04:41 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/17 12:08:06 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,22 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 // Return: A pointer to the copy.
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
+// This function ft_strchr searchs the first occurance of the character
+// in a string s.
+// Return: A pointer to the matching character or NULL if it is not found.
+char	*ft_strchr(const char *s, int c);
+
+// This function ft_strrchr searchs the last occurance of the character
+// in a string s.
+// Return: A pointer to the matching character or NULL if it is not found.
+char	*ft_strrchr(const char *s, int c);
+
+// This function ft_strlcat copies n-1 bytes to the end of dest string 
+// by 0 terminating the results. src and dest must be NUL-terminated.
+// Return: The total length of the string they tried to create (initial length
+// of dest plus length of src).
+size_t	ft_strlcat(char *dest, char *src, size_t size);
+
 // This function ft_strlcpy copies n-1 bytes to a dest string by 0 terminating
 // the results. src must be NUL-terminated.
 // Return: The total length of the string they tried to create (length of src).
@@ -71,7 +87,12 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size);
 
 // This function ft_strlen is checking the length of a string.
 // Return: length of a string as int.
-int	ft_strlen(char *str);
+size_t	ft_strlen(char *str);
+
+// This function ft_strncmp compares the first n bytes of string s1 and s2.
+// Return: Difference between the first pair of bytes that differ in
+// s1 and s2 as int. If n is zero, the return value is zero.
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // This function ft_tolower convert uppercase letters to lowercase.
 // No locale.

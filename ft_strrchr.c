@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/16 17:55:55 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 11:24:36 by cgodecke         ###   ########.fr       */
+/*   Created: 2022/12/16 13:46:09 by cgodecke          #+#    #+#             */
+/*   Updated: 2022/12/17 12:53:44 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// This function ft_memcpy copies n bytes from memory area src 
-//to memory area dest. The memory areas shall not overlap.
-// Return: A pointer to the copy.
+// This function ft_strrchr searchs the last occurance of the character
+// in a string s.
+// Return: A pointer to the matching character or NULL if it is not found.
+#include "libft.h"
 
-#include <strings.h>
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (n > 0)
+	len = ft_strlen((char *)s);
+	if (s[len] == '\0' && c == '\0')
+		return ((char *)&s[len]);
+	while (len >= 0)
 	{
-		*(char *)dest = *(char *)src;
-		dest++;
-		src++;
-		n--;
+		if (s[len] == c)
+			return ((char *)&s[len]);
+		len--;
 	}
-	return ((char *)dest);
+	return (0);
 }
