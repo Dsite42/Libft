@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 12:08:06 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/17 16:58:09 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,12 @@ size_t	ft_strlen(char *str);
 // Return: Difference between the first pair of bytes that differ in
 // s1 and s2 as int. If n is zero, the return value is zero.
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
+
+// This function ft_strnstr search for a string in another string withhin the
+// first n characters.
+// Return: A pointer to the start of the searched string or NULL if the string
+// is not found or the srource string if to_find is emty.
+char	*ft_strnstr(const char *ccstr, const char *ccto_find, size_t n);
 
 // This function ft_tolower convert uppercase letters to lowercase.
 // No locale.
