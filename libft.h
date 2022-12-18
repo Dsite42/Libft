@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 19:30:26 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/18 12:28:01 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ int	ft_atoi(char *str);
 // by overwriting it with '\0'
 // Return: None.
 void	ft_bzero(void *prt, size_t n);
+
+// This function ft_calloc allocates memory for an array of nmemb elements of
+// size bytes each. The memory is set to zero.
+// Return: If nmemb or size is 0, then calloc() returns NULL. If the multi-
+// plication of nmemb and size would result in integer overflow, then calloc()
+// returns an error. By sucsess returns a pointer to the allocated memory.
+void	*ft_calloc(size_t nmemb, size_t size);
 
 // This function ft_isalpha checks if the character is alphabetic (a-z && A-Z).
 // No locale.
@@ -75,6 +82,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 // in a string s.
 // Return: A pointer to the matching character or NULL if it is not found.
 char	*ft_strchr(const char *s, int c);
+
+// This function ft_strdup duplicates a string.
+// Return: A pointer to the duplicated string. It returns NULL if insufficient memory was available.
+char	*ft_strdup(const char *src);
+
 
 // This function ft_strrchr searchs the last occurance of the character
 // in a string s.
