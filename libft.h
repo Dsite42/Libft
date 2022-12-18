@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/18 12:28:01 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/18 14:22:48 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,9 @@ char	*ft_strchr(const char *s, int c);
 // Return: A pointer to the duplicated string. It returns NULL if insufficient memory was available.
 char	*ft_strdup(const char *src);
 
+// This function ft_strjoin create a new string by concatenate two strings.
+// Return: Pointer to new string or NULL if memory allocation fails.
+char	*ft_strjoin(char const *s1, char const *s2);
 
 // This function ft_strrchr searchs the last occurance of the character
 // in a string s.
@@ -106,7 +109,7 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size);
 
 // This function ft_strlen is checking the length of a string.
 // Return: length of a string as int.
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 
 // This function ft_strncmp compares the first n bytes of string s1 and s2.
 // Return: Difference between the first pair of bytes that differ in
