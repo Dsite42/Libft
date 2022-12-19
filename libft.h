@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/19 10:13:11 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/19 11:23:22 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 // Return: A pointer to the start of the searched string or NULL if the string
 // is not found or the srource string if to_find is emty.
 char	*ft_strnstr(const char *ccstr, const char *ccto_find, size_t n);
+
+// This function ft_substr creates a new substring out of a strings.
+// The substring begins at index ’start’ and is of maximum size ’len’.
+// Return: Pointer to new substring or NULL if memory allocation fails.
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 // This function ft_tolower convert uppercase letters to lowercase.
 // No locale.
