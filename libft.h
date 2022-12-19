@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/19 11:23:22 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/19 12:14:07 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size);
 // This function ft_strlcpy copies n-1 bytes to a dest string by 0 terminating
 // the results. src must be NUL-terminated.
 // Return: The total length of the string they tried to create (length of src).
-size_t	ft_strlcpy(char *dest, char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 
 // This function ft_strlen is checking the length of a string.
 // Return: length of a string as int.
@@ -126,6 +126,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 // Return: A pointer to the start of the searched string or NULL if the string
 // is not found or the srource string if to_find is emty.
 char	*ft_strnstr(const char *ccstr, const char *ccto_find, size_t n);
+
+// This function ft_strtrim creates a copy of a string, but removed the
+// characters specified in set from the beginning and end of the string.
+// Return: Pointer to the trimmed string. NULL if the allocation fails.
+char *ft_strtrim(char const *s1, char const *set);
 
 // This function ft_substr creates a new substring out of a strings.
 // The substring begins at index ’start’ and is of maximum size ’len’.
