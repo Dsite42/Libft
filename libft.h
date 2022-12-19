@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/18 14:22:48 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/19 10:13:11 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ int	ft_isdigit(int c);
 // This function ft_isprint checks if the character is a printable character.
 // Return: 1 if yes 0 if not as int.
 int	ft_isprint(int c);
+
+// This function ft_itoa converts an int to a string.
+// Return: The string representing the integer. NULL if the allocation fails.
+
+char	*ft_itoa(int n);
 
 // This function ft_memset overwrites n bytes in the memory from the pointer
 // by constant byte c. 
