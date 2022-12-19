@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/19 12:14:07 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/19 16:19:29 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 // The memory areas shall not overlap.
 // Return: A pointer to the copy.
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+// This function ft_split creates a new array of strings that have been split
+// from a string seperated by a char. The array ends with a NULL pointer.
+// Return: Pointer to the new array of new strings resulting from the split.
+// NULL if the allocation fails.
+char	**ft_split(char const *s, char c);
 
 // This function ft_strchr searchs the first occurance of the character
 // in a string s.
