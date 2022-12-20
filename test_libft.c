@@ -270,18 +270,36 @@ int	main(void)
 	int		fd;
 	char	buf;
 	
-	fd = open("/home/coder/.basecamp/basecamp_warmup/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	ft_putchar_fd('X', fd);
 	close(fd);
-	fd = open("/home/coder/.basecamp/basecamp_warmup/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	read(fd, &buf, 1);
 	close(fd);
-	remove("/home/coder/.basecamp/basecamp_warmup/Libft/test.txt");
+	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
 	if (buf == 'X')
 		printf("ft_putchar_fd: OK!\n");
 	else
 		printf("ft_putchar_fd: Fail\n");
 	printf("%c\n", buf);
+
+
+	//ft_putstr_fd
+	char	s[] = "Hallo";
+	char	buf1[10];
+	
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	ft_putstr_fd(s, fd);
+	close(fd);
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	read(fd, &buf1, 5);
+	close(fd);
+	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	if (ft_strncmp(s, buf1, 5) == 0)
+		printf("ft_putstr_fd: OK!\n");
+	else
+		printf("ft_putstr_fd: Fail\n");
+	printf("%s | %s\n", s, buf1);
 
 
 	//ft_split
