@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/20 16:24:02 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:25:50 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,11 @@ void	*ft_memmove(void *dest, const void *src, size_t len);
 // descriptor.
 // Return: None.
 void ft_putchar_fd(char c, int fd);
+
+// This function ft_putendl_fd outputs the string ’s’ to the given file
+// descriptor followed by a newline.
+// Return: None.
+void	ft_putendl_fd(char *s, int fd);
 
 // This function ft_putchar_fd outputs the string ’s’ to the given file
 // descriptor.
