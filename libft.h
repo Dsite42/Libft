@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: cgodecke <cgodecke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/19 18:54:18 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/20 15:39:40 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 // The memory areas shall not overlap.
 // Return: A pointer to the copy.
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+// This function ft_memmove copies n bytes from memory area src to memory area
+// dest and is able to use overlap src and dest.
+// Return: A pointer to the copy.
+void	*ft_memmove(void *dest, const void *src, size_t len);
 
 // This function ft_putchar_fd outputs the character ’c’ to the given file
 // descriptor.

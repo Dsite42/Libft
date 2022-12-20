@@ -171,48 +171,16 @@ int	main(void)
 	printf("%s | %s | %s\n", ft_itoa(n3), ft_itoa(n4), ft_itoa(n5));
 
 
-	//ft_memset
-	char	str00[] = "Smt to test";
-	n = 2;
-	len = ft_strlen(str00);
-	int		c = 88;
-	store = n;
-	i = n;
-	//char *test = malloc(256);
-
-	ft_memset(str00, c, n);
-	//printf("XX: %s", str0);
-	//bzero(str0, n);
-	
-	while(n > 0)
-	{
-		if (str00[n - 1] == c)
-			i--;
-		n--;
-	}
-	if (n == i)
-		printf("ft_memset: OK!\n");
-	else
-		printf("ft_memset: Fail\n");
-	
-	while(len > 0)
-	{
-		printf("%c", str00[len - 1]);
-		len--;
-	}
-	printf("\n");
-
-
 	//ft_memchr
 	char	str01[] = "Smt tX test";
 	n = 11;
-	c = 88;
+	int c12 = 88;
 	
-	if (ft_memchr(str01, c, n) == memchr(str01, c, n))
+	if (ft_memchr(str01, c12, n) == memchr(str01, c12, n))
 		printf("ft_memchr: OK!\n");
 	else
 		printf("ft_memchr: Fail\n");
-	printf("%p|%p\n", ft_memchr(str01, c, n), memchr(str01, c, n));
+	printf("%p|%p\n", ft_memchr(str01, c12, n), memchr(str01, c12, n));
 
 
 	//ft_memcmp
@@ -250,6 +218,52 @@ int	main(void)
 		printf("ft_memcpy: Fail\n");
 	write(1, str05, 11);
 	write(1, "\n", 1);
+
+
+	//ft_memmove
+	char	str14[] = "Hallo";
+	char	*str15;
+	size_t	n6 = 5;
+
+	str15 = &str14[3];
+	ft_memmove(str15, str14, n6);
+	if (str14[3] == 'H' && str15[4] == 'o')
+		printf("ft_memmove: OK!\n");
+	else
+		printf("ft_memmove: Fail\n");
+	printf("1:%p %s 2:%p %s\n", str14, str14, str15, str15);
+
+
+	//ft_memset
+	char	str00[] = "Smt to test";
+	n = 2;
+	len = ft_strlen(str00);
+	int		c = 88;
+	store = n;
+	i = n;
+	//char *test = malloc(256);
+
+	ft_memset(str00, c, n);
+	//printf("XX: %s", str0);
+	//bzero(str0, n);
+	
+	while(n > 0)
+	{
+		if (str00[n - 1] == c)
+			i--;
+		n--;
+	}
+	if (n == i)
+		printf("ft_memset: OK!\n");
+	else
+		printf("ft_memset: Fail\n");
+	
+	while(len > 0)
+	{
+		printf("%c", str00[len - 1]);
+		len--;
+	}
+	printf("\n");
 
 
 	//ft_putchar_fd
