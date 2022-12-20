@@ -6,7 +6,7 @@
 /*   By: cgodecke <cgodecke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/20 17:25:50 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:41:47 by cgodecke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,11 @@ void ft_putchar_fd(char c, int fd);
 // descriptor followed by a newline.
 // Return: None.
 void	ft_putendl_fd(char *s, int fd);
+
+// This function ft_putendl_fd outputs the integer ’n’ to the given file
+// descriptor.
+// Return: None.
+void	ft_putnbr_fd(int n, int fd);
 
 // This function ft_putchar_fd outputs the string ’s’ to the given file
 // descriptor.

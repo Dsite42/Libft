@@ -284,6 +284,43 @@ int	main(void)
 	printf("%c\n", buf);
 
 
+	//ft_putnbr_fd
+	int	s3 = 1234;
+	char	buf3[10];
+	char	*cmp = "1234";
+	
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	ft_putnbr_fd(s3, fd);
+	close(fd);
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	read(fd, &buf3, 4);
+	close(fd);
+	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	if (ft_strncmp(cmp, buf3, 4) == 0)
+		printf("ft_putnbr_fd: OK!\n");
+	else
+		printf("ft_putnbr_fd: Fail\n");
+	printf("%i | %s\n", s3, buf3);
+
+
+	//ft_putendl_fd
+	char	s2[] = "Hallo";
+	char	buf2[10];
+	
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	ft_putendl_fd(s2, fd);
+	close(fd);
+	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	read(fd, &buf2, 6);
+	close(fd);
+	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	if (ft_strncmp(s2, buf2, 5) == 0)
+		printf("ft_putendl_fd: OK!\n");
+	else
+		printf("ft_putendl_fd: Fail\n");
+	printf("%s | %s\n", s2, buf2);
+
+
 	//ft_putstr_fd
 	char	s[] = "Hallo";
 	char	buf1[10];
