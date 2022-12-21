@@ -38,7 +38,6 @@ int	ft_atoi(char *str)
 	int	minus;
 	int	int_res;
 	int	i;
-	int	len;
 
 	minus = 0;
 	start_n = is_spmn (str, &minus);
@@ -46,7 +45,6 @@ int	ft_atoi(char *str)
 	int_res = 0;
 	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
 		i++;
-	len = i - start_n;
 	i = 0;
 	while (str[start_n] >= '0' && str[start_n] <= '9' && str[start_n] != '\0')
 	{

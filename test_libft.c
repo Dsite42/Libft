@@ -26,7 +26,6 @@ int	main(void)
 	char 	str0[] = "Smt to test";
 	int		n = 2;
 	int len = ft_strlen(str0);
-	int 	store = n;
 	int		i = n;
 	//char *test = malloc(256);
 
@@ -239,7 +238,6 @@ int	main(void)
 	n = 2;
 	len = ft_strlen(str00);
 	int		c = 88;
-	store = n;
 	i = n;
 	//char *test = malloc(256);
 
@@ -270,13 +268,13 @@ int	main(void)
 	int		fd;
 	char	buf;
 	
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	ft_putchar_fd('X', fd);
 	close(fd);
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	read(fd, &buf, 1);
 	close(fd);
-	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	remove("/home/chris/Core/Libft/test.txt");
 	if (buf == 'X')
 		printf("ft_putchar_fd: OK!\n");
 	else
@@ -289,13 +287,13 @@ int	main(void)
 	char	buf3[10];
 	char	*cmp = "1234";
 	
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	ft_putnbr_fd(s3, fd);
 	close(fd);
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	read(fd, &buf3, 4);
 	close(fd);
-	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	remove("/home/chris/Core/Libft/test.txt");
 	if (ft_strncmp(cmp, buf3, 4) == 0)
 		printf("ft_putnbr_fd: OK!\n");
 	else
@@ -307,13 +305,13 @@ int	main(void)
 	char	s2[] = "Hallo";
 	char	buf2[10];
 	
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	ft_putendl_fd(s2, fd);
 	close(fd);
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	read(fd, &buf2, 6);
 	close(fd);
-	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	remove("/home/chris/Core/Libft/test.txt");
 	if (ft_strncmp(s2, buf2, 5) == 0)
 		printf("ft_putendl_fd: OK!\n");
 	else
@@ -325,13 +323,13 @@ int	main(void)
 	char	s[] = "Hallo";
 	char	buf1[10];
 	
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	ft_putstr_fd(s, fd);
 	close(fd);
-	fd = open("/Users/cgodecke/Desktop/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
+	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	read(fd, &buf1, 5);
 	close(fd);
-	remove("/Users/cgodecke/Desktop/Core/Libft/test.txt");
+	remove("/home/chris/Core/Libft/test.txt");
 	if (ft_strncmp(s, buf1, 5) == 0)
 		printf("ft_putstr_fd: OK!\n");
 	else
@@ -454,10 +452,8 @@ int	main(void)
 	char	str10[] = "Smt tX test";
 	char	str11[] = "tX";
 	char	str12[] = "";
-	char	*res;
 	n = 5;
 	int	n2 = 7;
-	res = ft_strnstr(str10, str11, n);
 	
 	if ((ft_strnstr(str10, str11, n) == NULL) && (*ft_strnstr(str10, str11, n2) == str10[4]) && (*ft_strnstr(str10, str12, n2) == str10[0]))
 		printf("ft_strnstr: OK!\n");

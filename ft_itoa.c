@@ -98,9 +98,7 @@ char	*ft_itoa(int n)
 	char	min;
 	int		digits;
 	char	*sstart;
-	int		i;
 
-	i = 0;
 	min = isneg(&n);
 	digits = c_digits(n);
 	s = (char *)malloc((digits + 1) * sizeof(char));
