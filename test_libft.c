@@ -268,11 +268,11 @@ int	main(void)
 	//ft_lstnew
 	char str16[] = "Hallo";
 	
-	if (ft_memcmp(str02, str03, n) == memcmp(str02, str03, n))
-		printf("ft_memcmp: OK!\n");
+	if (ft_strncmp(str16, (char *)ft_lstnew(str16)->content, 5) == 0)
+		printf("ft_lstnew: OK!\n");
 	else
-		printf("ft_memcmp: Fail\n");
-	printf("%s|%s\n", str16,  (char *)ft_lstnew(str)->content);
+		printf("ft_lstnew: Fail\n");
+	printf("%s|%s\n", str16,  (char *)ft_lstnew(str16)->content);
 
 
 	//ft_putchar_fd
