@@ -3,12 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/20 17:41:47 by cgodecke         ###   ########.fr       */
+/*   Updated: 2022/12/23 23:49:28 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+typedef struct		s_list
+{
+	void 			*content;
+	struct s_list	*next;
+}					t_list;
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -88,6 +94,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 // Return: A pointer to the copy.
 void	*ft_memmove(void *dest, const void *src, size_t len);
 
+// This function ft_lstnew creates a new node. The member variable ’content’ is
+// initialized with the value of the parameter ’content’. The variable ’next’
+// is initialized to NULL.
+// Return: The new node as t_list.
+t_list *ft_lstnew(void *content);
+
 // This function ft_putchar_fd outputs the character ’c’ to the given file
 // descriptor.
 // Return: None.
@@ -123,20 +135,20 @@ char	*ft_strchr(const char *s, int c);
 // Return: A pointer to the duplicated string. It returns NULL if insufficient memory was available.
 char	*ft_strdup(const char *src);
 
+// This function ft_striteri applies function f to each character of the string,
+// so that it can be manipulated.
+// Return: None.
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 // This function ft_strjoin create a new string by concatenate two strings.
 // Return: Pointer to new string or NULL if memory allocation fails.
 char	*ft_strjoin(char const *s1, char const *s2);
-
-// This function ft_strrchr searchs the last occurance of the character
-// in a string s.
-// Return: A pointer to the matching character or NULL if it is not found.
-char	*ft_strrchr(const char *s, int c);
 
 // This function ft_strlcat copies n-1 bytes to the end of dest string 
 // by 0 terminating the results. src and dest must be NUL-terminated.
 // Return: The total length of the string they tried to create (initial length
 // of dest plus length of src).
-size_t	ft_strlcat(char *dest, char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 // This function ft_strlcpy copies n-1 bytes to a dest string by 0 terminating
 // the results. src must be NUL-terminated.
@@ -146,6 +158,12 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 // This function ft_strlen is checking the length of a string.
 // Return: length of a string as int.
 size_t	ft_strlen(const char *str);
+
+// This function ft_strmapi creats a new string with the results of appling th
+// function f to each character of the string s.
+// Return: A pointer to the string created from the successive applications
+// of ’f’. Returns NULL if the allocation fails.
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 // This function ft_strncmp compares the first n bytes of string s1 and s2.
 // Return: Difference between the first pair of bytes that differ in
@@ -157,6 +175,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 // Return: A pointer to the start of the searched string or NULL if the string
 // is not found or the srource string if to_find is emty.
 char	*ft_strnstr(const char *ccstr, const char *ccto_find, size_t n);
+
+// This function ft_strrchr searchs the last occurance of the character
+// in a string s.
+// Return: A pointer to the matching character or NULL if it is not found.
+char	*ft_strrchr(const char *s, int c);
 
 // This function ft_strtrim creates a copy of a string, but removed the
 // characters specified in set from the beginning and end of the string.
@@ -177,6 +200,6 @@ int	ft_tolower(int c);
 // No locale.
 // Return: 1 if yes 0 if not as int.
 int	ft_toupper(int c);
-
-
 #endif
+
+

@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 int	main(void)
 {
@@ -264,6 +265,16 @@ int	main(void)
 	printf("\n");
 
 
+	//ft_lstnew
+	char str16[] = "Hallo";
+	
+	if (ft_memcmp(str02, str03, n) == memcmp(str02, str03, n))
+		printf("ft_memcmp: OK!\n");
+	else
+		printf("ft_memcmp: Fail\n");
+	printf("%s|%s\n", str16,  (char *)ft_lstnew(str)->content);
+
+
 	//ft_putchar_fd
 	int		fd;
 	char	buf;
@@ -283,18 +294,18 @@ int	main(void)
 
 
 	//ft_putnbr_fd
-	int	s3 = 1234;
+	int	s3 = -1234;
 	char	buf3[10];
-	char	*cmp = "1234";
+	char	*cmp = "-1234";
 	
 	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
 	ft_putnbr_fd(s3, fd);
 	close(fd);
 	fd = open("/home/chris/Core/Libft/test.txt", O_RDWR | O_CREAT, 0666);
-	read(fd, &buf3, 4);
+	read(fd, &buf3, 5);
 	close(fd);
 	remove("/home/chris/Core/Libft/test.txt");
-	if (ft_strncmp(cmp, buf3, 4) == 0)
+	if (ft_strncmp(cmp, buf3, 5) == 0)
 		printf("ft_putnbr_fd: OK!\n");
 	else
 		printf("ft_putnbr_fd: Fail\n");
@@ -384,6 +395,22 @@ int	main(void)
 	printf("%s  %p|%p\n", ft_strdup(src2), ft_strdup(src2), src2);
 
 
+	//ft_striteri
+	void	move2(unsigned int, char *c)
+{
+	*c = *c + 1;
+}
+	char s17[] = "ABC";
+	char	*cmp2 = "BCD";
+
+	ft_striteri(s17, move2);
+	if (ft_strncmp(s17, cmp2, 3) == 0)
+		printf("ft_striteri: OK!\n");
+	else
+		printf("ft_striteri: Fail\n");
+	printf("%s | %s\n", s17, cmp2);
+
+
 	//ft_strjoin
 	char	a[] = "Hello";
 	char	b[] = "World";
@@ -434,6 +461,22 @@ int	main(void)
 	else
 		printf("ft_strlen: Fail\n");
 	printf("%zu %zu %zu\n", ft_strlen(str3), ft_strlen(str1), ft_strlen(str2));
+
+
+	//ft_strmapi
+	char	move(unsigned int, char c)
+{
+	c = c + 1;
+	return (c);
+}
+	char s16[] = "ABC";
+	char	*cmp1 = "BCD";
+
+	if (ft_strncmp(cmp1, ft_strmapi(s16, move), 3) == 0)
+		printf("ft_strmapi: OK!\n");
+	else
+		printf("ft_strmapi: Fail\n");
+	printf("%s | %s\n", s16, ft_strmapi(s16, move));
 
 
 	//ft_strncmp
