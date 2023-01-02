@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/02 16:03:59 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/02 16:15:50 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 // dest and is able to use overlap src and dest.
 // Return: A pointer to the copy.
 void	*ft_memmove(void *dest, const void *src, size_t len);
+
+// This function ft_lstadd_back adds the node ’new’ at the end of the list.
+// Return: None.
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 // This function ft_lstadd_front adds the node ’new’ at the beginning of the 
 // list.

@@ -268,15 +268,30 @@ int	main(void)
 	printf("\n");
 
 
+	//ft_lstadd_back
+	char oldval0[] = "old";
+	char newval0[] = "new";
+	t_list *old0;
+	t_list *new0;
+
+	old0 = ft_lstnew(oldval0);
+	new0 = ft_lstnew(newval0);
+	ft_lstadd_back(&old0, new0);
+
+	if (ft_strncmp(newval0, (char *)ft_lstlast(old0)->content, 3) == 0)
+		printf("ft_lstadd_back: OK!\n");
+	else
+		printf("ft_lstadd_back: Fail\n");
+	printf("%s|%s\n", (char *)old0->content,  (char *)old0->next->content);
+
+
 	//ft_lstadd_front
 	char oldval[] = "old";
 	char newval[] = "new";
 	t_list *old;
-	t_list *tmp;
 	t_list *new;
 
 	old = ft_lstnew(oldval);
-	tmp = old;
 	new = ft_lstnew(newval);
 	ft_lstadd_front(&old, new);
 
@@ -284,7 +299,7 @@ int	main(void)
 		printf("ft_lstadd_front: OK!\n");
 	else
 		printf("ft_lstadd_front: Fail\n");
-	printf("%s|%s\n", (char *)tmp->content,  (char *)old->content);
+	printf("%s|%s\n", (char *)old->content,  (char *)old->next->content);
 
 
 	//ft_lstlast
