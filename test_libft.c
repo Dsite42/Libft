@@ -9,6 +9,8 @@
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int ft_lstsize(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
 
 
 int	main(void)
@@ -300,6 +302,28 @@ int	main(void)
 	else
 		printf("ft_lstadd_front: Fail\n");
 	printf("%s|%s\n", (char *)old->content,  (char *)old->next->content);
+
+
+	//ft_lstdelone
+	void	putX(void *lst)
+	{
+		free(lst);
+	}
+
+	const char ori[] = "Hello";
+	char *dup;
+	t_list *s18;
+
+	dup = ft_strdup(ori);
+	s18 = ft_lstnew(dup);
+	ft_lstdelone(s18, putX);
+
+	if (ft_strncmp(ori, dup, 5) != 0)
+		printf("ft_lstdelone: OK!\n");
+	else
+		printf("ft_lstdelone: Fail\n");
+		
+	printf("%s|%s\n", ori, dup);
 
 
 	//ft_lstlast
