@@ -7,6 +7,9 @@
 #include <fcntl.h>
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int ft_lstsize(t_list *lst);
+
 
 int	main(void)
 {
@@ -265,6 +268,25 @@ int	main(void)
 	printf("\n");
 
 
+	//ft_lstadd_front
+	char oldval[] = "old";
+	char newval[] = "new";
+	t_list *old;
+	t_list *tmp;
+	t_list *new;
+
+	old = ft_lstnew(oldval);
+	tmp = old;
+	new = ft_lstnew(newval);
+	ft_lstadd_front(&old, new);
+
+	if (ft_strncmp(newval, (char *)old->content, 3) == 0)
+		printf("ft_lstadd_front: OK!\n");
+	else
+		printf("ft_lstadd_front: Fail\n");
+	printf("%s|%s\n", (char *)tmp->content,  (char *)old->content);
+
+
 	//ft_lstnew
 	char str16[] = "Hallo";
 	
@@ -273,6 +295,36 @@ int	main(void)
 	else
 		printf("ft_lstnew: Fail\n");
 	printf("%s|%s\n", str16,  (char *)ft_lstnew(str16)->content);
+
+
+	//ft_lstsize
+	i = 5;
+	int val;
+	t_list *head;
+	t_list *current;
+
+	head = ft_lstnew(&i);
+	while (i>0)
+	{
+		val = i - 1;
+		ft_lstadd_front(&head,ft_lstnew(&val));
+		i--;
+	}
+
+	if (ft_lstsize(head) == 6)
+		printf("ft_lstsize: OK!\n");
+	else
+		printf("ft_lstsize: Fail\n");
+	current = head;
+	while (current->next != NULL)
+	{
+		printf("%i", *(int*)current->content);
+		current = current->next;
+	}
+		printf("%i", *(int*)current->content);
+
+		printf(" | %i\n", ft_lstsize(head));
+	
 
 
 	//ft_putchar_fd

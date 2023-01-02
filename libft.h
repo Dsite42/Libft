@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/23 23:49:28 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/02 15:33:40 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,21 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 // Return: A pointer to the copy.
 void	*ft_memmove(void *dest, const void *src, size_t len);
 
+// This function ft_lstadd_front adds the node ’new’ at the beginning of the 
+// list.
+// Return: None.
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
 // This function ft_lstnew creates a new node. The member variable ’content’ is
 // initialized with the value of the parameter ’content’. The variable ’next’
 // is initialized to NULL.
 // Return: The new node as t_list.
 t_list *ft_lstnew(void *content);
+
+// This function ft_lstsize Counts the number of nodes in a list.
+// Return: The length of the list as int.
+int ft_lstsize(t_list *lst);
+
 
 // This function ft_putchar_fd outputs the character ’c’ to the given file
 // descriptor.
