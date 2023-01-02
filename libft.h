@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/02 15:33:40 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/02 16:03:59 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,10 @@ void	*ft_memmove(void *dest, const void *src, size_t len);
 // Return: None.
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
+// This function ft_lstlast returns the last node of the list.
+// Return: Last node of the list as t_list.
+t_list *ft_lstlast(t_list *lst);
+
 // This function ft_lstnew creates a new node. The member variable ’content’ is
 // initialized with the value of the parameter ’content’. The variable ’next’
 // is initialized to NULL.
@@ -108,7 +112,6 @@ t_list *ft_lstnew(void *content);
 // This function ft_lstsize Counts the number of nodes in a list.
 // Return: The length of the list as int.
 int ft_lstsize(t_list *lst);
-
 
 // This function ft_putchar_fd outputs the character ’c’ to the given file
 // descriptor.

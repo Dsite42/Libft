@@ -287,6 +287,23 @@ int	main(void)
 	printf("%s|%s\n", (char *)tmp->content,  (char *)old->content);
 
 
+	//ft_lstlast
+	char oldval1[] = "old";
+	char newval1[] = "new";
+	t_list *old1;
+	t_list *new1;
+
+	old1 = ft_lstnew(oldval1);
+	new1 = ft_lstnew(newval1);
+	ft_lstadd_front(&old1, new1);
+
+	if (ft_strncmp(oldval1, (char *)ft_lstlast(old1)->content, 3) == 0)
+		printf("ft_lstlast: OK!\n");
+	else
+		printf("ft_lstlast: Fail\n");
+	printf("%s|%s\n", oldval1,  (char *)ft_lstlast(old1)->content);
+
+
 	//ft_lstnew
 	char str16[] = "Hallo";
 	
