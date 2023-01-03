@@ -10,6 +10,8 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int ft_lstsize(t_list *lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
 
 
 
@@ -303,6 +305,40 @@ int	main(void)
 		printf("ft_lstadd_front: Fail\n");
 	printf("%s|%s\n", (char *)old->content,  (char *)old->next->content);
 
+
+	//ft_lstclear
+
+	/*
+	//////////////////////////////////// How to test? Immer segfault, nächste node auch schoni gefreed?
+	void	putX2(void *lst)
+	{
+		free(lst);
+	}
+
+	const char ori1[] = "Hello";
+	const char ori2[] = "World";
+	char *dup1;
+	char *dup2;
+	t_list *s19;
+	t_list *s20;
+
+	dup1 = ft_strdup(ori1);
+	dup2 = ft_strdup(ori2);
+	s19 = ft_lstnew(dup1);
+	s20 = ft_lstnew(dup2);
+	ft_lstadd_back(&s19, s20);
+	printf("size:%i", ft_lstsize(s19));
+	//ft_lstdelone(s20, putX2);
+	//printf("size:%i", ft_lstsize(s19));
+	ft_lstclear(&s19, putX2);
+	
+	if (ft_strncmp(ori1, dup1, 5) != 0 && ft_strncmp(ori1, dup2, 5) != 0)
+		printf("ft_lstclear: OK!\n");
+	else
+		printf("ft_lstclear: Fail\n");
+		
+	printf("%s|%s|%s\n", ori1, dup1, dup2);
+*/
 
 	//ft_lstdelone
 	void	putX(void *lst)
