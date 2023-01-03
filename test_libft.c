@@ -362,6 +362,37 @@ int	main(void)
 	printf("%s|%s\n", ori, dup);
 
 
+	//ft_lstiter
+
+	void fdup(void *lst)
+	{
+		int fd2 = open("/home/chris/Core/Libft/testfdup.txt", O_RDWR | O_CREAT, 0666);
+		ft_putstr_fd(lst, fd2);
+		close(fd2);
+	}
+	char oldval2[] = "oldx";
+	char newval2[] = "new";
+	char result[] = "newx";
+	char	buf4[4];
+	int fd2;
+	t_list *old2;
+	t_list *new2;
+
+	old2 = ft_lstnew(oldval2);
+	new2 = ft_lstnew(newval2);
+	ft_lstadd_back(&old2, new2);
+	ft_lstiter(old2,fdup);
+	fd2 = open("/home/chris/Core/Libft/testfdup.txt", O_RDWR | O_CREAT, 0666);
+	read(fd2, &buf4, 4);
+	close(fd2);
+	remove("/home/chris/Core/Libft/testfdup.txt");
+	if (ft_strncmp(result, buf4, 4) == 0)
+		printf("ft_lstiter: OK!\n");
+	else
+		printf("ft_lstiter: Fail\n");
+	printf("%s|%s|%s\n", (char *)old2->content, (char *)old2->next->content,  buf4);
+
+
 	//ft_lstlast
 	char oldval1[] = "old";
 	char newval1[] = "new";

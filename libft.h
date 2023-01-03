@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 11:40:35 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/03 16:07:30 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,9 +115,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 // Return: None.
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
+// This function ft_lstiter Iterates the list ’lst’ and applies the function
+// ’f’ on the content of each node.
+// Return: None.
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
 // This function ft_lstlast returns the last node of the list.
 // Return: Last node of the list as t_list.
-t_list *ft_lstlast(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 // This function ft_lstnew creates a new node. The member variable ’content’ is
 // initialized with the value of the parameter ’content’. The variable ’next’
