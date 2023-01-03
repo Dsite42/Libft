@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 18:55:48 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/03 21:37:36 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct		s_list
 // by a single optional '+' or '-' sign.
 // Return: The converted string number as int.
 
-int	ft_atoi(char *str);
+int	ft_atoi(const char *str);
 
 // This function bzero erases n bytes in the memory from the pointer
 // by overwriting it with '\0'

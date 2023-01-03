@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 13:46:09 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/16 15:53:13 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/03 21:26:21 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 // Return: pointer to memory area prt.
 #include <strings.h>
 
-void	*ft_memset(void *prt, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n > 0)
 	{
-		*(char *)prt = c;
-		prt++;
+		*(char *)s = c;
+		s++;
 		n--;
 	}
-	return (prt);
+	return (s);
 }

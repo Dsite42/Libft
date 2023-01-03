@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 13:46:09 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/16 17:04:06 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/03 21:34:00 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 // does not occur in the given memory area.
 #include <strings.h>
 
-void	*ft_memchr(const void *prt, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (n > 0)
 	{
-		if (*(const char *)prt == c)
-			return ((void *)prt);
-		prt++;
+		if (*(const char *)s == c)
+			return ((void *)s);
+		s++;
 		n--;
 	}
 	return (0);
