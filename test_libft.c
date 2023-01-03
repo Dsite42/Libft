@@ -6,11 +6,6 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*));
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int ft_lstsize(t_list *lst);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 
 
@@ -408,6 +403,33 @@ int	main(void)
 	else
 		printf("ft_lstlast: Fail\n");
 	printf("%s|%s\n", oldval1,  (char *)ft_lstlast(old1)->content);
+
+
+	//ft_lstmap
+	void *movemap(void *content)
+	{
+		char *c = (char*)malloc(sizeof(char));
+
+		*c = *(char *)content + 1;
+		return (c);
+	}
+
+	char a2 = 'A';
+	char b2 = 'B';
+	t_list *res;
+
+	t_list *ta = ft_lstnew(&a2);
+	t_list *tb = ft_lstnew(&b2);
+	ft_lstadd_back(&ta, tb);
+
+	res = ft_lstmap(ta, movemap, NULL);
+
+	if (*(char *)res->content == 'B' && *(char *)res->next->content == 'C')
+		printf("ft_lstmap: OK!\n");
+	else
+		printf("ft_lstmap: Fail\n");
+		
+	printf("%s|%s\n", (char *)res->content, (char *)res->next->content);
 
 
 	//ft_lstnew
