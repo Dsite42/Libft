@@ -6,27 +6,30 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:13:18 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 21:37:36 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:15:35 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-typedef struct		s_list
-{
-	void 			*content;
-	struct s_list	*next;
-}					t_list;
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <strings.h>
+# include <strings.h>
+# include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 // This function ft_atoi converts the string to an int.The string may begin with
 // an arbitrary amount of white space (as determined by isspace(3)) followed
 // by a single optional '+' or '-' sign.
 // Return: The converted string number as int.
 
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 // This function bzero erases n bytes in the memory from the pointer
 // by overwriting it with '\0'
@@ -43,24 +46,24 @@ void	*ft_calloc(size_t nmemb, size_t size);
 // This function ft_isalpha checks if the character is alphabetic (a-z && A-Z).
 // No locale.
 // Return: 1 if yes 0 if not as int.
-int	ft_isalpha(int c);
+int		ft_isalpha(int c);
 
 // This function ft_isalnum checks if the character is digit (0-9)
 // or alphabetic (a-z && A-Z).
 // Return: 1 if yes 0 if not as int.
-int	ft_isalnum(int c);
+int		ft_isalnum(int c);
 
 // This function ft_isascii checks if the character is an ASCII (0-127).
 // Return: 1 if yes 0 if not as int.
-int	ft_isascii(int c);
+int		ft_isascii(int c);
 
 // This function ft_isdigit checks if the character is digit (0-9).
 // Return: 1 if yes 0 if not as int.
-int	ft_isdigit(int c);
+int		ft_isdigit(int c);
 
 // This function ft_isprint checks if the character is a printable character.
 // Return: 1 if yes 0 if not as int.
-int	ft_isprint(int c);
+int		ft_isprint(int c);
 
 // This function ft_itoa converts an int to a string.
 // Return: The string representing the integer. NULL if the allocation fails.
@@ -80,12 +83,12 @@ void	*ft_memchr(const void *prt, int c, size_t n);
 
 // This function ft_memcmp compares the first n bytes (each interpreted 
 // as unsigned char) of the memory areas s1 and s2.
-// Return: Difference between the first pair of bytes (interpreted as unsigned char) that differ in
-// s1 and s2 as int. If n is zero, the return value is zero.
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
+// Return: Difference between the first pair of bytes (interpreted as unsigned 
+//char)that differ in s1 and s2 as int. If n is zero, the return value is zero.
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-// This function ft_memcpy copies n bytes from memory area src to memory area dest. 
-// The memory areas shall not overlap.
+// This function ft_memcpy copies n bytes from memory area src to memory area 
+// dest. The memory areas shall not overlap.
 // Return: A pointer to the copy.
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
@@ -135,16 +138,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // initialized with the value of the parameter ’content’. The variable ’next’
 // is initialized to NULL.
 // Return: The new node as t_list.
-t_list *ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 
 // This function ft_lstsize Counts the number of nodes in a list.
 // Return: The length of the list as int.
-int ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 // This function ft_putchar_fd outputs the character ’c’ to the given file
 // descriptor.
 // Return: None.
-void ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd);
 
 // This function ft_putendl_fd outputs the string ’s’ to the given file
 // descriptor followed by a newline.
@@ -173,13 +176,14 @@ char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 
 // This function ft_strdup duplicates a string.
-// Return: A pointer to the duplicated string. It returns NULL if insufficient memory was available.
+// Return: A pointer to the duplicated string. It returns NULL if insufficient
+// memory was available.
 char	*ft_strdup(const char *src);
 
 // This function ft_striteri applies function f to each character of the string,
 // so that it can be manipulated.
 // Return: None.
-void ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 // This function ft_strjoin create a new string by concatenate two strings.
 // Return: Pointer to new string or NULL if memory allocation fails.
@@ -204,12 +208,12 @@ size_t	ft_strlen(const char *str);
 // function f to each character of the string s.
 // Return: A pointer to the string created from the successive applications
 // of ’f’. Returns NULL if the allocation fails.
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 // This function ft_strncmp compares the first n bytes of string s1 and s2.
 // Return: Difference between the first pair of bytes that differ in
 // s1 and s2 as int. If n is zero, the return value is zero.
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // This function ft_strnstr search for a string in another string withhin the
 // first n characters.
@@ -225,7 +229,7 @@ char	*ft_strrchr(const char *s, int c);
 // This function ft_strtrim creates a copy of a string, but removed the
 // characters specified in set from the beginning and end of the string.
 // Return: Pointer to the trimmed string. NULL if the allocation fails.
-char *ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(char const *s1, char const *set);
 
 // This function ft_substr creates a new substring out of a strings.
 // The substring begins at index ’start’ and is of maximum size ’len’.
@@ -235,12 +239,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 // This function ft_tolower convert uppercase letters to lowercase.
 // No locale.
 // Return: 1 if yes 0 if not as int.
-int	ft_tolower(int c);
+int		ft_tolower(int c);
 
 // This function ft_toupper convert lowercase letters to uppercase.
 // No locale.
 // Return: 1 if yes 0 if not as int.
-int	ft_toupper(int c);
+int		ft_toupper(int c);
 #endif
-
-

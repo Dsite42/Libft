@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 19:13:11 by coder             #+#    #+#             */
-/*   Updated: 2022/12/17 11:23:43 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:12:10 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // This function ft_strncmp compares the first n bytes of string s1 and s2.
 // Return: Difference between the first pair of bytes that differ in
 // s1 and s2 as int. If n is zero, the return value is zero.
-#include <string.h>
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 13:46:09 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 12:53:44 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:12:24 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // This function ft_strrchr searchs the last occurance of the character
 // in a string s.
 // Return: A pointer to the matching character or NULL if it is not found.
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

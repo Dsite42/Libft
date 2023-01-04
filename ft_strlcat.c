@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 19:13:11 by coder             #+#    #+#             */
-/*   Updated: 2022/12/17 10:56:12 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:41 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // by 0 terminating the results. src and dest must be NUL-terminated.
 // Return: The total length of the string they tried to create (initial length
 // of dest plus length of src).
-#include <string.h>
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

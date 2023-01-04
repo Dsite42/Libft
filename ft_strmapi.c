@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 15:10:10 by chris             #+#    #+#             */
-/*   Updated: 2022/12/23 16:58:12 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:12:03 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // Return: A pointer to the string created from the successive applications
 // of ’f’. Returns NULL if the allocation fails.
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 17:55:55 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 21:28:11 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:10:06 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // dest and is able to use overlap src and dest.
 // Return: A pointer to the copy.
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

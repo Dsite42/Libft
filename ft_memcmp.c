@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 17:20:42 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 11:25:56 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:10:01 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // Return: Difference between the first pair of bytes (interpreted as unsigned
 //char) that differ in s1 and s2 as int. If n is zero, the return value is zero.
 
-#include <strings.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

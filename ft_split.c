@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 13:04:51 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/19 17:01:29 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:22 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // Return: Pointer to the new array of new strings resulting from the split.
 // NULL if the allocation fails.
 
-#include <stdlib.h>
 #include "libft.h"
 
 unsigned int	c_count(char const *str, char c)

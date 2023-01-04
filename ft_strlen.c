@@ -6,14 +6,14 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:42:17 by coder             #+#    #+#             */
-/*   Updated: 2023/01/03 21:25:39 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:58 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // This function ft_strlen is checking the length of a string.
 // Return: length of a string as size_t.
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

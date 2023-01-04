@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:37:38 by coder             #+#    #+#             */
-/*   Updated: 2022/12/19 11:42:55 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:50 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 // the results. src must be NUL-terminated.
 // Return: The total length of the string they tried to create (length of src).
 
-#include <strings.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)

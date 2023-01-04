@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 15:12:48 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/17 18:44:50 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:12:15 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // Return: A pointer to the start of the searched string or NULL if the string
 // is not found or the srource string if to_find is emty.
 
-#include <string.h>
 #include "libft.h"
 
 void	check_goback(size_t *i, size_t *j, char **str, size_t *found)

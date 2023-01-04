@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 16:26:54 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/19 10:24:35 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:10 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // This function ft_itoa converts an int to a string.
 // Return: The string representing the integer. NULL if the allocation fails.
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_exp(int base, int exp)

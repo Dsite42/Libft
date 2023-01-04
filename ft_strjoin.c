@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgodecke <cgodecke@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 09:02:07 by cgodecke          #+#    #+#             */
-/*   Updated: 2022/12/18 14:32:12 by cgodecke         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:36 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // This function ft_strjoin create a new string by concatenate two strings.
 // Return: Pointer to new string or NULL if memory allocation fails.
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

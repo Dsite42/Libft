@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 16:37:36 by chris             #+#    #+#             */
-/*   Updated: 2023/01/03 15:57:57 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:09:14 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 // Return: None.
 
 #include "libft.h"
-#include<stdlib.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

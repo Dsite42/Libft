@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:50:55 by chris             #+#    #+#             */
-/*   Updated: 2023/01/02 16:06:58 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:09:22 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 // Return: Last node of the list as t_list.
 
 #include "libft.h"
-#include <stddef.h>
 
 t_list	*ft_lstlast(t_list *lst)
 {

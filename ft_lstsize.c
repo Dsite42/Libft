@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:00:29 by chris             #+#    #+#             */
-/*   Updated: 2023/01/02 16:05:28 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:09:35 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,16 @@
 // Return: The length of the list as int.
 
 #include "libft.h"
-#include <stddef.h>
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*current;
 	int		i;
 
 	i = 0;
-	current = lst;
-	while (current->next != NULL)
+	while (lst != NULL)
 	{
-		current = current->next;
+		lst = lst->next;
 		i++;
 	}
-	return (i + 1);
+	return (i);
 }

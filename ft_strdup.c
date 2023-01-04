@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:37:07 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 21:38:49 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:11:28 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 // Return: A pointer to the duplicated string. It returns NULL if insufficient
 // memory was available.
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

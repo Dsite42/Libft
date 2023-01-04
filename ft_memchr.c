@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 13:46:09 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 21:34:00 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:09:54 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 // for the first instance of c.
 // Return: A pointer to the matching byte or NULL if the character
 // does not occur in the given memory area.
-#include <strings.h>
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

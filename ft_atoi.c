@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:34:40 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/03 21:39:35 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:20:13 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int	ft_atoi(const char *nprt)
 	while (nprt[i] >= '0' && nprt[i] <= '9' && nprt[i] != '\0')
 		i++;
 	i = 0;
-	while (nprt[start_n] >= '0' && nprt[start_n] <= '9' && nprt[start_n] != '\0')
+	while (nprt[start_n] >= '0' && nprt[start_n] <= '9'
+		&& nprt[start_n] != '\0')
 	{
 		int_res = (int_res * 10) + (nprt[start_n] - 48);
 		i++;

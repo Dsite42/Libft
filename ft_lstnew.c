@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:58:36 by chris             #+#    #+#             */
-/*   Updated: 2022/12/24 00:08:17 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:09:31 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // The variable ’next’ is initialized to NULL.
 // Return: The new node as t_list.
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
