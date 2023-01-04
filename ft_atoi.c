@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 17:34:40 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:20:13 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 21:50:35 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // by a single optional '+' or '-' sign.
 // Return: The converted string number as int.
 
-int	is_spmn(const char *str, int *minus)
+static int	is_spmn(const char *str, int *minus)
 {
 	int		i;
 

@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 15:12:48 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:12:15 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 22:10:03 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-void	check_goback(size_t *i, size_t *j, char **str, size_t *found)
+static void	check_goback(size_t *i, size_t *j, char **str, size_t *found)
 {
 	if (*found == 1)
 	{
@@ -28,7 +28,7 @@ void	check_goback(size_t *i, size_t *j, char **str, size_t *found)
 	*j = 0;
 }
 
-char	*long_search(size_t to_find_len, char *str, char *to_find, size_t n)
+static char	*long_search(size_t to_find_len, char *str, char *to_find, size_t n)
 {
 	size_t	i;
 	size_t	j;

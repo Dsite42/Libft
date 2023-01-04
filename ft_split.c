@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 13:04:51 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:11:22 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 22:03:45 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-unsigned int	c_count(char const *str, char c)
+static unsigned int	c_count(char const *str, char c)
 {
 	unsigned int	i;
 	unsigned int	cnt;
