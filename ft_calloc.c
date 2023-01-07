@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 10:53:38 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:08:16 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/04 23:00:35 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	char	*mem;
 
 	if (nmemb == 0 || size == 0)
-		return (NULL);
+		return (malloc(0));
 	if (nmemb * size > 2147483647)
 		return (NULL);
 	mem = (void *)malloc (nmemb * size);

@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 16:26:54 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:08:38 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/05 22:36:04 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,7 @@
 // Return: The string representing the integer. NULL if the allocation fails.
 
 #include "libft.h"
-
-static int	ft_exp(int base, int exp)
-{
-	int	i;
-	int	result;
-
-	if (exp == 0)
-		return (1);
-	i = 1;
-	result = base;
-	while (i < exp)
-	{
-		result = result * base;
-		i++;
-	}
-	return (result);
-}
+#include <stdio.h>
 
 static int	c_digits(int n)
 {
@@ -39,7 +23,7 @@ static int	c_digits(int n)
 	i = 0;
 	if (n == 0)
 		return (1);
-	while (n >= 1)
+	while (n != 0)
 	{
 		n = n / 10;
 		i++;
@@ -47,69 +31,37 @@ static int	c_digits(int n)
 	return (i);
 }
 
-static	void	put_to_str(int n, char **s, int digits, int min)
+static void	zero_or_neg(char *s, int n_ori, int digits)
 {
-	int	i;
-	int	exp;
-
-	i = 0;
-	while (i < digits)
-	{
-		if (n < 10)
-			**s = n + '0';
-		else
-		{
-			exp = ft_exp(10, digits - 1 - i);
-			**s = (n / exp) + '0';
-			n = n - ((n / exp) * exp);
-			if (min == 2)
-			{
-				n = n + 1;
-				min = 0;
-			}
-		}
-		i++;
-		*s = *s + 1;
-	}
-}
-
-static int	isneg(int *n)
-{
-	int	min;
-
-	min = 0;
-	if (*n < 0)
-	{
-		min = 1;
-		if (*n == -2147483648)
-		{
-			*n = *n + 1;
-			min = 2;
-		}
-		*n = -*n;
-	}
-	return (min);
+	if (n_ori == 0)
+		s[digits - 1] = 0 + '0';
+	if (n_ori < 0)
+		s[digits - 1] = '-';
 }
 
 char	*ft_itoa(int n)
 {
 	char	*s;
-	char	min;
+	int		n_ori;
 	int		digits;
-	char	*sstart;
 
-	min = isneg(&n);
+	n_ori = n;
 	digits = c_digits(n);
+	if (n < 0)
+		digits++;
 	s = (char *)malloc((digits + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
-	sstart = s;
-	if (min > 0)
+	s[digits] = '\0';
+	while (n != 0)
 	{
-		*s = '-';
-		s++;
+		if (n < 0)
+			s[digits - 1] = ((n % 10) * -1) + '0';
+		else
+			s[digits - 1] = (n % 10) + '0';
+		n = n / 10;
+		digits--;
 	}
-	put_to_str(n, &s, digits, min);
-	*s = '\0';
-	return (sstart);
+	zero_or_neg(s, n_ori, digits);
+	return (s);
 }

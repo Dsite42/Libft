@@ -6,7 +6,7 @@
 #    By: chris <chris@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2023/01/04 20:55:51 by chris            ###   ########.fr        #
+#    Updated: 2023/01/06 21:52:08 by chris            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,9 +65,11 @@ BONUSOBJFILES = $(BONUSFILES:.c=.o)
 
 NAME = libft.a
 
-all: 
+$(NAME):
 	$(CC) -c $(CC_FLAGS) $(INFILES)
 	$(AR)  $(AR_FLAGS) $(NAME) $(OBJFILES)
+
+all: $(NAME)
 
 clean:
 	rm -f $(OBJFILES) $(BONUSOBJFILES)

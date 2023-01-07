@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 17:20:42 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:10:01 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/05 18:26:53 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	cs1 = (char *)s1;
 	cs2 = (char *)s2;
 	i = 0;
-	while (i < n && (cs1[i] != '\0' || cs2[i] != '\0'))
+	while (i < n)
 	{
 		if (cs1[i] != cs2[i])
 		{

@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 13:04:51 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 22:03:45 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/06 13:52:09 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,26 @@
 
 #include "libft.h"
 
-static unsigned int	c_count(char const *str, char c)
+static unsigned int	str_count(char const *str, char c)
 {
 	unsigned int	i;
 	unsigned int	cnt;
 
 	i = 0;
 	cnt = 0;
+	if (str[0] == '\0')
+		return (cnt);
+	while (str[i] == c)
+		i++;
+	if (str[i] == '\0')
+		return (cnt);
 	while (str[i] != '\0')
 	{
-		if (str[i] == c)
+		if ((str[i] == c) && (str[i + 1] != c && str[i + 1] != '\0'))
 			cnt++;
 		i++;
 	}
-	return (cnt);
+	return (cnt + 1);
 }
 
 static unsigned int	betweenlen(char const *str, char sep)
@@ -39,6 +45,18 @@ static unsigned int	betweenlen(char const *str, char sep)
 
 	i = 0;
 	while (str[i] != '\0' && str[i] != sep)
+		i++;
+	return (i);
+}
+
+static unsigned int	sea_start(char const *s, char c)
+{
+	unsigned int	i;
+
+	i = 0;
+	if (c == '\0')
+		return (i);
+	while (s[i] == c)
 		i++;
 	return (i);
 }
@@ -52,14 +70,16 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	cs = (char *)s;
-	arr_size = c_count(cs, c) + 2;
+	arr_size = str_count(cs, c) + 1;
 	arr_split = (char **) malloc(arr_size * sizeof(char *));
 	if (arr_split == NULL)
 		return (NULL);
+	cs = cs + sea_start(s, c);
 	while (i < arr_size - 1)
 	{
 		arr_split[i] = ft_substr((char const *) cs, 0, betweenlen(cs, c));
-		cs = ft_strchr(cs, c) + 1;
+		cs = cs + betweenlen(cs, c) + 1
+			+ sea_start(cs + betweenlen(cs, c) + 1, c);
 		i++;
 	}
 	arr_split[i] = NULL;

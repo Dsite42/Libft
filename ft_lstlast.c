@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:50:55 by chris             #+#    #+#             */
-/*   Updated: 2023/01/04 21:09:22 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/05 11:32:41 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*current;
-
-	current = lst;
-	while (current->next != NULL)
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		current = current->next;
+		lst = lst->next;
 	}
-	return (current);
+	return (lst);
 }

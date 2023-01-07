@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 15:12:48 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 22:10:03 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/06 18:41:02 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void	check_goback(size_t *i, size_t *j, char **str, size_t *found)
 {
 	if (*found == 1)
 	{
-		*str = *str - 1;
-		*i = *i - 1;
+		*str = *str - *j;
+		*i = *i - *j;
 	}
 	*found = 0;
 	*j = 0;

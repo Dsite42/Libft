@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:46:57 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:12:28 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/06 11:22:57 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	begin = 0;
 	end = ft_strlen(s1) - 1;
+	if (ft_strncmp(s1, "", 1) == 0 || ft_strncmp(set, "", 1) == 0)
+		return (ft_strdup(s1));
 	while (ft_strchr(set, s1[begin]) != 0)
 	{
+		if (s1[begin] == '\0')
+			break ;
 		begin++;
 	}
+	if (begin - 1 == end)
+		return (ft_strdup(""));
 	while (ft_strchr(set, s1[end]) != 0)
-	{
 		end--;
-	}
 	cpy_len = end - begin + 1;
 	trim = (char *) malloc((cpy_len + 1) * sizeof(char));
 	if (trim == NULL)

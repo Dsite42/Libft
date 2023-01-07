@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 13:46:09 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/04 21:21:22 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/06 21:32:54 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*cs;
 
 	cs = (char *)s;
+	c = c % 256;
 	while (*cs != '\0')
 	{
 		if (*cs == c)

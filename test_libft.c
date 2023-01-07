@@ -61,7 +61,8 @@ int	main(void)
 	int		ok = 1;
 	i = 0;
 	
-	mem = ft_calloc(n, sizeof(int));
+	//mem = ft_calloc(n, sizeof(int));
+	mem = ft_calloc(0, 0);
 	while (i < n)
 	{
 		if (mem[i] != '\0')
@@ -551,11 +552,11 @@ int	main(void)
 	char	**res2;
 	
 	res2 = ft_split(str13, sep1);
-	if (res2 != NULL && *res2[0] == '\0' && *res2[1] == 'T' && *res2[2] == 's' && *res2[3] == 't' && *res2[4] == '\0')
+	if (res2 != NULL && *res2[0] == 'T' && *res2[1] == 's' && *res2[2] == 't')
 		printf("ft_split: OK!\n");
 	else
 		printf("ft_split: Fail\n");
-	printf("%s | %s | %s | %s | %s | %s\n", res2[0], res2[1], res2[2], res2[3], res2[4], res2[5]);
+	printf("%s | %s | %s\n", res2[0], res2[1], res2[2]);
 
 
 	//ft_strchr
@@ -568,7 +569,7 @@ int	main(void)
 	else
 		printf("ft_strchr: Fail\n");
 	printf("%p|%p   %p|%p\n", ft_strchr(str08, c), strchr(str08, c), ft_strchr(str08, c2), strchr(str08, c2));
-
+	printf("GG:%p|%p   %p|%p\n", ft_strchr("teste", 357), strchr("teste", 357), ft_strchr("teste", 1024), strchr("teste", 1024));
 
 	//ft_strrchr
 	char	str09[] = "Smt tX test";
@@ -689,6 +690,12 @@ int	main(void)
 
 
 	//ft_strnstr
+
+	void test(size_t n)
+	{
+		printf("GG:%li\n", n);
+	}
+
 	char	str10[] = "Smt tX test";
 	char	str11[] = "tX";
 	char	str12[] = "";
@@ -700,6 +707,7 @@ int	main(void)
 	else
 		printf("ft_strnstr: Fail\n");
 	printf("%s  %s  %s\n", ft_strnstr(str10, str11, n), ft_strnstr(str10, str11, n2), ft_strnstr(str10, str12, n));
+	test(-1);
 
 
 	//ft_strtrim
