@@ -6,10 +6,9 @@
 #    By: chris <chris@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 15:39:27 by cgodecke          #+#    #+#              #
-#    Updated: 2023/01/06 21:52:08 by chris            ###   ########.fr        #
+#    Updated: 2023/01/09 13:57:55 by chris            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 CC = cc
 CC_FLAGS = -Wall -Wextra -Werror
@@ -74,7 +73,7 @@ all: $(NAME)
 clean:
 	rm -f $(OBJFILES) $(BONUSOBJFILES)
 
-fclean: 	clean
+fclean: clean
 	rm -f $(NAME)
 
 bonus: 
@@ -83,11 +82,4 @@ bonus:
 
 re: fclean all
 
-x: fclean
-	rm -f test_libft.o
-	make
-	make bonus
-	$(CC) $(CC_FLAGS) test_libft.c libft.a -o a.out
-	make clean
-	rm -f test_libft.o
-.PHONY: all clean fclean bonus re x
+.PHONY: all clean fclean bonus re
