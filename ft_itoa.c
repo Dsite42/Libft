@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 16:26:54 by cgodecke          #+#    #+#             */
-/*   Updated: 2023/01/05 22:36:04 by chris            ###   ########.fr       */
+/*   Updated: 2023/01/09 14:02:40 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 // Return: The string representing the integer. NULL if the allocation fails.
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	c_digits(int n)
 {
